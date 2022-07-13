@@ -9,8 +9,8 @@ export class ServNameService {
   constructor() { }
 
   public loggedInStatus() {
-    // check if user logged in
-    this.isLoggedin = true;
+    // this function check if user logged in
+    this.isLoggedin = false; //This line shows the default state of the user
     return this.isLoggedin
   }
 }
