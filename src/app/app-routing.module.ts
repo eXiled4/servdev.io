@@ -11,6 +11,9 @@ const routes: Routes = [
   { path: 'first', component: FirstComponent, pathMatch: "full" }
 ];
 
+// For purpose of exeercise, canActivate NOT included in first to allow page to visualise logged in status
+// setting canActivate will prevent access to page if not logged in
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

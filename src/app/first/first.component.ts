@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServNameService } from '../serv-name.service';
 
 @Component({
   selector: 'app-first',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstComponent implements OnInit {
 
-  constructor() { }
+  public isLoggedin:boolean=false; // injected isLoggedIn fx from ServNameService
 
+  constructor(private serv:ServNameService) { }
+    
   ngOnInit(): void {
+    this.isLoggedin = this.serv.loggedInStatus();
   }
 
 }
